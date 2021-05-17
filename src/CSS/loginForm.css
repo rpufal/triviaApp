@@ -1,11 +1,4 @@
 .login {
-    /* display: flex;
-    flex-direction: column;
-    width: 25%;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background: cadetblue; */
-    /* height: 100%; */
     width: 100%;
     height: 300px;
     display: flex;
@@ -13,36 +6,74 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
-    background: indigo;
+    background:#4BF264;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.login h1, h2, label {
+    color: #017012;
+}
+
+.login input {
+    border-radius: 5px;
+    margin-left: 5px;
+    background: #f7f5ed;
+    /* opacity: 0.5; */
 }
 
 .settings-section {
-    background: khaki;
     padding: 10px;
     width: 30%;
     display: flex;
     align-items: flex-start;
+    background: #017012;
+    border-radius: 10px;
+
 }
 
 .main-content {
     display: flex;
     width: 40%;
     margin: 10% 30%;
-    background: honeydew;
 }
 
-button {
+.btn-play:disabled {
     width: 20%;
     align-self: flex-end;
+    color: #017012;
+    background: #4BF264;
+    border: 2px solid #017012;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.btn-play:enabled {
+    width: 20%;
+    align-self: flex-end;
+    background: #017012;
+    color: #4BF264;
+        padding: 4px;
+    border-radius: 8px;
 }
 
 .btn-settings {
-    width: 20%;
+    width: 100%;
     align-self: flex-start;
+    background: none;
+    border: 2px solid #4BF264;
+    color: #4BF264;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.btn-settings:hover {
+    background: #4BF264;
+    color: #017012;
 }
 
 
 
 body {
-    background: gray;
+    background: #f7f5ed;
 }

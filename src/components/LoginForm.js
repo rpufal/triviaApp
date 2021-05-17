@@ -127,9 +127,9 @@ class LoginForm extends Component {
           data-testid="btn-settings"
           onClick={ this.handleSettings }
           className="btn-settings"
-        >
-          C
+        >Configurações
         </button>
+        {/* <img alt='settings' src="../imgs/settings.png" /> */}
         {redirectparaSettings && <Redirect to="/settings" />}
       </section>
     );
