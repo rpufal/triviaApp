@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { configureQuestions } from '../actions';
+import '../CSS/settingsPage.css';
 
 class Settings extends Component {
   constructor() {
@@ -49,9 +50,9 @@ class Settings extends Component {
       'Multiple Choice': 'multiple',
       'True/False': 'boolean' };
     return (
-      <select name="type" value={ type } onChange={ this.handleChange }>
+      <select name="type" value={ type } onChange={ this.handleChange } className="settings-select">
         {Object.keys(questionTypes).map((item, index) => (
-          <option value={ questionTypes[item] } key={ index }>{item}</option>
+          <option value={ questionTypes[item] } key={ index } className="select-option">{item}</option>
         ))}
       </select>
     );
@@ -86,7 +87,7 @@ class Settings extends Component {
       'Entertainment: Cartoons & Animations': 32,
     };
     return (
-      <select name="category" value={ category } onChange={ this.handleChange }>
+      <select name="category" value={ category } onChange={ this.handleChange } className="settings-select">
         {Object.keys(questionCategories).map((item, index) => (
           <option value={ questionCategories[item] } key={ index }>{item}</option>
         ))}
@@ -102,7 +103,7 @@ class Settings extends Component {
       Hard: 'hard',
     };
     return (
-      <select name="difficulty" value={ difficulty } onChange={ this.handleChange }>
+      <select name="difficulty" value={ difficulty } onChange={ this.handleChange } className="settings-select">
         {Object.keys(questionDifficulties).map((item, index) => (
           <option value={ questionDifficulties[item] } key={ index }>{item}</option>
         ))}
@@ -113,7 +114,7 @@ class Settings extends Component {
   render() {
     return (
       <main>
-        <h1 data-testid="settings-title">
+        <h1 data-testid="settings-title" className="settings-title">
           Settings
         </h1>
         <form>
@@ -123,12 +124,14 @@ class Settings extends Component {
           <button
             type="button"
             onClick={ this.completeSettings }
+            className="settings-btn"
           >
             Configurar
           </button>
           <Link to="/">
             <button
               type="button"
+              className="settings-btn"
             >
               Volta para a tela inicial
             </button>
