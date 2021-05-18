@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import md5 from 'crypto-js/md5';
+import '../CSS/header.css';
 
 class Header extends Component {
   getPlayerData() {
@@ -17,20 +18,20 @@ class Header extends Component {
     const { player: { name, score, gravatarEmail } } = this.getPlayerData();
     return (
       <header className="feedback-header">
-        <p
-          className="feedback-player-name"
-          data-testid="header-player-name"
-        >
-          { name }
-        </p>
-        <p data-testid="header-score">
-          { score }
-        </p>
         <img
           src={ this.getGravatarImgUrl(gravatarEmail) }
           alt="user"
           data-testid="header-profile-picture"
         />
+        <h3
+          className="feedback-player-name"
+          data-testid="header-player-name"
+        >
+          { name }
+        </h3>
+        <h3 data-testid="header-score">
+          { score }
+        </h3>
       </header>
     );
   }

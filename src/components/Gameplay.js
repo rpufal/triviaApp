@@ -138,7 +138,7 @@ class Gameplay extends Component {
     const { questionIndex } = this.state;
     const currentQuestionInfo = questionList.results[questionIndex];
     return (
-      <section>
+      <section className="question-section">
         <h1 data-testid="question-category">{ currentQuestionInfo.category}</h1>
         <p data-testid="question-text">{decode(currentQuestionInfo.question)}</p>
       </section>
@@ -149,7 +149,7 @@ class Gameplay extends Component {
     const { answersAndPosition: { newAnswersList, randomIndex } } = this.props;
     const { correct, incorrect, isButtonDisabled } = this.state;
     return (
-      <section>
+      <section className="buttons-list">
         { newAnswersList.map((answer, index) => {
           if (randomIndex === index) {
             return (
@@ -189,6 +189,7 @@ class Gameplay extends Component {
         type="button"
         onClick={ () => this.prepareNextQuestion(questionList) }
         data-testid="btn-next"
+        className="next-button"
       >
         Próxima
       </button>
@@ -204,9 +205,13 @@ class Gameplay extends Component {
       <>
         <Header />
         <main>
+          <div className="question-info">
           { !loading && this.renderQuestion()}
-          { !loading && this.renderAnswers()}
           {!loading && <h2>{ timer }</h2>}
+          </div>
+          <div className="answers-info">
+          { !loading && this.renderAnswers()}
+          </div>
           { renderNextButton && this.renderNextButton()}
         </main>
       </>

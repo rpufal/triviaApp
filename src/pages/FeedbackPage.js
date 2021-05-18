@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/feedbackPage.css';
+// import '../CSS/feedbackPage.css';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 

@@ -1,7 +1,94 @@
-.correct {
-  border: 3px solid rgb(6, 240, 15);
+button {
+  font-size: 1rem;
 }
 
-.incorrect {
-  border: 3px solid red;
+.buttons-list button {
+  background: #F0E9E6;
+  border: 2px solid #70544A;
+  color: #70544A;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0.5rem;
+  width: 40%;
 }
+
+.buttons-list button:hover {
+  background: #70544A;
+  border: 2px solid #F0E9E6;
+  color: #F0E9E6;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0.5rem;
+  width: 40%;
+}
+
+.buttons-list .correct {
+  background: #4BF264;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0.5rem;
+  width: 40%;
+  border: 2px solid rgb(6, 240, 15);
+}
+
+.buttons-list .incorrect {
+  background: #B51E00;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0.5rem;
+  border: 2px solid #B51E00;
+}
+
+.next-button {
+  background: #F0E9E6;
+  border: 2px solid #70544A;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.next-button:hover {
+  background: #70544A;
+  border: 2px solid #F0E9E6;
+  color: #F0E9E6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+
+.question-info {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+  align-items: center;
+  width: 100%;
+  border: 0.3rem solid #70544A;
+  border-radius: 1rem;
+  width: 46%;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.answers-info {
+  display: flex;
+  flex-wrap: auto;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: 0.3rem solid #70544A;
+  border-radius: 1rem;
+  margin-top: 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 2%;
+}
+
